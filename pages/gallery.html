@@ -1,0 +1,179 @@
+<!--
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+-->
+<!DOCTYPE html>
+<html>
+  <!--
+    En el bloque head hemos insertado todos los enlaches a las paginas esternas,
+    como la de style.css y main.js y los enlaches para utilizar diferentes
+    resoluziones de pantalla.
+  -->
+    <head>
+      <!--Nombre pagina Art and Technology.html-->
+        <title>
+            Blog Gallery
+        </title>
+        <!--Enlaches necesarios-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+     <!--
+    En el bloque body hemos colocado todos los elementos visibles en la pagina web.
+    -->
+    <body>
+      <!--En el primer div con clase "header" hay el logotipo, y las dos escritas que cambian:
+      de letras y de color. Este apartado es presente en todas las paginas web.-->
+      <div class="header">
+        <!--bloque "aside" que contiene el logotipo-->
+        <img id="logo" src="../img/logo1.jpeg">
+        <!--h1 que empieza con "Art and Technology" y al pasar del cursor cambia en "The new artistic avant-garde"-->
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Art and Technology</h1>
+        <!--h3 que al pasar del cursor camba del color blanco al color azul-->
+        <h3 id="cambioColor" onmouseover="mouseover()" onmouseout="mouseout()">Blog that tries to unite art and technology.</h3>
+      </div>
+          <br>
+          <!--En el segundo div con el id "box" hay todos los enlaches a las paginas web del blog.
+          Este box esta presente en todas las paginas web y, además, presenta la clase "active" que
+          permite saber siempre en que apartado se encuentra el usario gracias al nombre de la página
+          web resaltado de otro color-->
+          <div id="box">
+            <ul>
+              <!--Pagina web principal, "Home"-->
+              <li><a href="../index.html">Home</a></li>
+              <!--Pagina web "Art and technology", que presenta a nivel teórico el ámbito del arte y de la tecnología.-->
+              <li><a href="arteTec.html">Arte y Tecnología</a></li>
+              <!--Pagina web "Gallery", que presenta las imagenes de las obras anticipadas en el apartado "Home".-->
+              <li><a class="active" href="gallery.html">Gallery</a></li>
+              <!--Pagina web "Contact", que permte escribir directamente a los creadores de este blog o entrar de manera registrada.-->
+              <li><a href="contact.html">Contact</a></li>
+              <!--Pagina web "Location", que muestra la ubicación de la empresa y el lugar exacto de trabajo de la misma.-->
+              <li><a href="location.html">Location</a></li>
+            </ul>
+            </div>
+          <br>
+          <br>
+          <br>
+          <!--Div con clase "gallery" que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+            <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="http://www.jeffkoons.com">
+              <!--imagen de la obra-->
+              <img src="../img/jeff-koons-exhibition-ballon-dog-orange.max-944x1274.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">Jeff Koons, Balloon Dog (Orange), 1994-2000.</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://llano.mx/artistas/oscar-santillan/?lang=eng">
+              <!--imagen de la obra-->
+              <img src="../img/Oscar-Santillán_portada-página-LLANO-2020.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">Oscar Santillán</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://antimundo.org/intro">
+              <!--imagen de la obra-->
+              <img src="../img/SOLARIS+-+Oscar+Santillan+(MUAC).jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">OSCAR SANTILLÁN - SOLARIS</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://www.orbitat.art/encuentros/bosques-de-niebla-planetas-de-niebla">
+              <!--imagen de la obra-->
+              <img src="../img/Encuentro+3+Bosques+de+niebla_planetas+de+niebla+2-11.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">órbitat - Bosques de niebla, planetas de niebla</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="img_5terre.jpg">
+              <!--imagen de la obra-->
+              <img src="../img/Nietzsche+-+Oscar+Santillan+-+LACMA.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">OSCAR SANTILLÁN - AFTERWORD</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="ihttps://somamexico.org/archivo/persona?id=2161&nombre=Juan%20Carlos%20León">
+              <!--imagen de la obra-->
+              <img src="../img/2.png" alt="Forest" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">JUAN CARLOS LEÓN - Sorna</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://juancarlosleon.net/bio/">
+              <!--imagen de la obra-->
+              <img src="../img/1.png" alt="Northern Lights" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">JUAN CARLOS LEÓN - BARRAS</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://artishockrevista.com/2021/03/05/juan-carlos-leon-la-caida-del-jaguar/">
+              <!--imagen de la obra-->
+              <img src="../img/Detalle_Costra.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">JUAN CARLOS LEÓN: LA CAÍDA DEL JAGUAR</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://antimundo.org/works">
+              <!--imagen de la obra-->
+              <img src="../img/5.png" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">OSCAR SANTILLÁN - ASTRONAUT CUT</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="http://www.cristianvillavicencio.net/31_haptic_visual_identities.html">
+              <!--imagen de la obra-->
+              <img src="../img/03_khora.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">Cristian Villavicencio - Haptic/Visual Identities</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="img_lights.jpg">
+              <!--imagen de la obra-->
+              <img src="../img/4.png" alt="Northern Lights" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">Cristian Villavicencio - ENTRE HORIZONTES HÍBRIDOS</div>
+          </div>
+           <!--Div con clase gallery que contine la imagen de la obra y el nombre de la misma y del autor-->
+          <div class="gallery">
+             <!--Enlache que de la imagen lleva a la pagina oficial de la obra o del artista-->
+            <a target="_blank" href="https://antimundo.org/works">
+              <!--imagen de la obra-->
+              <img src="../img/How+Rivers+Think+-+Oscar+Santillan.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <!--Div con la clase "desc" que contiene el nombre del artista y/o de la obra-->
+            <div class="desc">OSCAR SANTILLÁN - HOW RIVERS THINK</div>
+          </div>   
+    </body>
+</html>

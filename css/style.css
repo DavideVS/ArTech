@@ -1,0 +1,678 @@
+/*
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+*/
+
+/*Estilos generales elemntos de todas las paginas web*/
+/*Estilo general para todas las paginas web*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*Estilo general para todos los body de cada pagina web*/
+body {
+  font-size: 28px;
+  background-color: whitesmoke;
+}
+
+/*Estilo para cada h1 de todas las paginas web*/
+h1{
+  color: whitesmoke;
+  background-color:#4F90A1;
+  margin-top: -90px;
+  margin-left: 100px;
+  font-size: 40px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*Estilo para cada h2 de todas las paginas web*/
+h2{
+  color: whitesmoke;
+  padding-left: 5px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
+}
+
+/*Estilo para cada h3 de todas las paginas web*/
+h3{
+  padding-left: 5px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
+  color: black;
+}
+
+/*Estilo para cada h4 de todas las paginas web*/
+h4{
+  padding-left: 5px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+  color: black;
+}
+
+/*parrafo1 de diferente tamano del normal*/
+#text1 {
+  font-size: 42px;
+  color: whitesmoke;
+}
+
+/*parrafo2 de diferente tamano del normal*/
+#text2 {
+  font-size: 32px;
+  color: wheat;
+}
+
+/*Estilo pagina Index.html*/
+/*Estilo tamaño, color y posicion logotipo*/
+aside,  #logo {
+  background-color:#4F90A1;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 1em;
+  transform: scale(.9);
+  transform-origin: 0 0;
+  transition: transform .6s;
+  user-select: none;
+  padding-top: 0px;
+  margin-top: 10px;
+  margin-left: 0px;
+  height: 100px;
+  width: 280px;
+}
+/*Animacion logotipo de pequeño a mas grande, cambio de esacala*/
+.large {
+  transform: scale(1.4);
+}
+
+/*Color inicial del h3 en en Index.html, que cambiará dede blanco, color establecido en esta sección, en azul*/
+#cambioColor{
+  padding-left: 5px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+/*Primer div que contine el logotipo, h1 y h3. Este apartado es de color azul y llega al maximo de ancho de la pantalla*/
+.header {
+  width: 100%;
+  height: 140px;
+  background-color: #4F90A1;
+
+}
+
+/*Estilo para cada parrafo de cada pagina web*/
+p {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 18px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: justify;
+}
+
+/*Estilo de la colleccion ul que contiene la navigazione interna en las diferentes paginas*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+/*posiccion en linea de cada apartado ("Home", "Art and Technology", ecc)*/
+li {
+  float: left;
+}
+
+/*Estilo de los nombres de cada pagina web, como el font-family, el color, el tamaño, ecc*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*Color de fondo de cada voz de la barra de navegación*/
+li a:hover {
+  background-color: #4F90A1;
+}
+
+/*clase .active que nos permite subrayar donde nos encontramos mientras navigamos en el intero blog*/
+.active {
+  background-color: #4F90A1;
+}
+
+/*paramentro de estilo del box serch, más precisamente de lo que acepta en su interior.*/
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 14px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/*Reducción del 50% de la barra de búsqueda al hacer clic en ella*/
+input[type=text]:focus {
+  width: 50%;
+}
+
+/*posicion y ancho general de la barra de búsqueda*/
+#box {
+  position: absolute;
+  width: 99%;
+}
+
+/*paddin izquierdo de cada boton "Down" de 2 px*/
+.down {
+  padding-left: 2px;
+}
+
+/*paddin izquierdo de cada boton "Up" de 10 px*/
+.up {
+  padding-left: 10px;
+}
+
+/*apartado que nos permite visualizar en manera mas corecta si el tamaño de la pantalla disminuye.
+En este caso el tamaño lega a un minimo de 400px, despues se produce un redimensionamiento de los elementos en su interior.
+Los elemntos modificados de tamaño principalemte son los mismo presente ya en la pagina web Index.html.
+Importante, algunos de estos paramentro cambian solamente en la pagina Index.html, pero otros cambian en todas las paginas, 
+por ejemplo los p, la inetra barra de navegación, todos los h, ecc*/
+@media only screen and (min-width: 10px) {
+  /*Estilo tamaño, color y posicion logotipo*/
+  aside,  #logo {
+    background-color:#4F90A1;
+    border-radius: 1em;
+    display: inline-block;
+    padding: 1em;
+    transform: scale(.8);
+    transform-origin: 0 0;
+    transition: transform .6s;
+    user-select: none;
+    padding-top: 0px;
+    margin-top: 10px;
+    margin-left: 0px;
+    height: 100px;
+    width: 280px;
+  }
+  /*Animacion logotipo de pequeño a mas grande, cambio de esacala*/
+  .large {
+    transform: scale(1.4);
+  }
+  
+  /*parrafo de tamano del normal*/
+  p {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: justify;
+  }
+  
+  /*parrafo1 de diferente tamano del normal*/
+  #text1 {
+    font-size: 16px;
+    color: whitesmoke;
+  }
+  
+  /*parrafo2 de diferente tamano del normal*/
+  #text2 {
+    font-size: 12px;
+    color: wheat;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: small;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 14px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  #boxSerch {
+    margin-top: 30px;
+    height: 20px;
+  }
+  
+  h1{
+    color: whitesmoke;
+    background-color:#4F90A1;
+    margin-top: -96px;
+    margin-left: 200px;
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  h2{
+    padding-left: 5px;
+    margin-top: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+  }
+  
+  h3{
+    padding-left: 5px;
+    margin-top: 32px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+  
+  h4{
+    padding-left: 5px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    color: black;
+  }
+  #cambioColor{
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}
+
+/*Estolo generales section1*/
+#section1 {
+  height: 830px;
+  margin-top: -60px;
+  background-color: #155C6E;
+}
+
+/*Estolo generales section2*/
+#section2 {
+  height: 830px;
+  background-color:#155C6E;
+}
+
+/*Estolo generales section3*/
+#section3 {
+  height: 830px;
+  background-color: #155C6E;
+}
+
+/*Estolo generales section4*/
+#section4 {
+  height: 830px;
+  background-color:#155C6E;
+}
+
+/*Estilo pagina Arte and Technology*/
+/*parte de box blanco donde se ecuentra la linea que indica el livel de scroll de la pagina*/
+.headerScroll {
+  position: fixed;
+  margin-top: 540px;
+  z-index: 1;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+/*h2 y nombre del scroll box*/
+.headerScroll, h2 {
+  color: #155C6E;
+  text-align: center;
+}
+
+/*linea azul mas escuro que no se mueve*/
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #155C6E;
+}
+
+/*linea azul mas claro que indica a que altura se encuentra el usario en la pagina web*/
+.progress-bar {
+  height: 8px;
+  width: 0%;
+  background: #7DD4B5;
+}
+
+/*bloque de contedino de texto que contine cada parrafo de esta section*/
+.content {
+  padding: 100px 0;
+  margin: -40px auto 0 auto;
+  width: 80%;
+}
+
+/*Apartado de redimensionar elementos a una anchura de pantalla de hasta un minimo de 400px,
+que permite tener una homogéneneneidad en la colocación de objetos
+en espacios más reducidos.*/
+@media screen and (min-width: 10px) {
+/*parte de box blanco donde se ecuentra la linea que indica el livel de scroll de la pagina*/
+.headerScroll {
+  position: fixed;
+  margin-top: 510px;
+  z-index: 1;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+  /*h2 y nombre del scroll box*/
+.headerScroll, h2 {
+  color: #155C6E;
+  text-align: center;
+}
+
+/*linea azul mas escuro que no se mueve*/
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #155C6E;
+}
+
+/*linea azul mas claro que indica a que altura se encuentra el usario en la pagina web*/
+.progress-bar {
+  height: 8px;
+  width: 0%;
+  background: #7DD4B5;
+}
+
+/*bloque de contedino de texto que contine cada parrafo de esta section*/
+.content {
+  padding: 100px 0;
+  margin: -40px auto 0 auto;
+  width: 80%;
+}
+}
+
+/*Estilo pagina Gallery*/
+/*primer div que indica cada bloque en el cual se coloca cada imagen y el titulo*/
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+/*border de cada div para delinear el espacio de todos los bloques div*/
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+/*resolucion imagen que se coloca al interior de cada div*/
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/*Estilo nombre del autor y/o nombre de la obra*/
+div.desc {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
+  color:#155C6E;
+  padding: 15px;
+  text-align: center;
+}
+
+/*tamaño de cada box igual a los de mas*/
+* {
+  box-sizing: border-box;
+}
+
+/*clase responsive para colocar corectamente cada boque en maniera uniforme*/
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+/*Apartado de redimensionar elementos a una anchura de pantalla de hasta 700px,
+o más pequeña, que permite tener una homogéneneneidad en la colocación de objetos
+en espacios más reducidos.*/
+@media only screen and (min-width: 10px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+/*Apartado de redimensionar elementos a una anchura de pantalla de hasta 500px,
+o más pequeña, que permite tener una homogéneneneidad en la colocación de objetos
+en espacios más reducidos.*/
+@media only screen and (max-width: 10px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+/*Estilo para poner en columna cada bloque div y para dar una linea mas de Gallery*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Estilo pagina Contact*/
+/*paramentro aceptados en las parte de texto del primer formulario, es decir el de registro
+en la sección Contact del Blog*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/*Boton submit que perimte enviar todos los datos insertados*/
+input[type=submit] {
+  background-color: #155C6E;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*color del boton submit*/
+input[type=submit]:hover {
+  background-color: #155C6E;
+}
+
+/*clase .container que indica que estilo tine que tener el texto a su interior*/
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*parametro para cada box*/
+* {
+  box-sizing: border-box;
+}
+
+/*estilo de la clase .conteiner*/
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 20px 0 30px 0;
+} 
+
+/*parametros de estilo y botones de enlace*/
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /*quitar subrayado de las anclas*/
+}
+
+/*estilo opacity de los botons del segundo form*/
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/*añadir colores adecuados a fb, twitter y botones de google*/
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+/*añadir colores adecuados a fb, twitter y botones de google*/
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+/*añadir colores adecuados a fb, twitter y botones de google*/
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/*estilo el botón enviar*/
+input[type=submit] {
+  background-color: #155C6E;
+  color: white;
+  cursor: pointer;
+}
+
+/*estilo el botón enviar*/
+input[type=submit]:hover {
+  background-color: #155C6E;
+}
+
+/*diseño de dos columnas*/
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/*Limpiar los flotadores después de las columnas*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*línea vertical*/
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #4F90A1;
+  height: 175px;
+}
+
+/*texto dentro de la línea vertical*/
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/*ocultar algunos textos en pantallas medianas y grandes*/
+.hide-md-lg {
+  display: none;
+}
+
+/*cubeta inferior*/
+.bottom-container {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  background-color: #4F90A1;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/*Diseño sensible - cuando la pantalla es menos de 650px de ancho,
+hacer que las dos columnas se apilan una encima de la otra en lugar
+de uno al lado del otro*/
+@media screen and (min-width: 10px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*Estilo pagina location*/
+/*clase .boxText de color azul*/
+.boxText {
+  width: 100%;
+  background-color: #4F90A1;
+}
+
+/*h1Location, parametros especificos para el h1 del apartado "Location"*/
+#h1Location {
+  color: whitesmoke;
+  background-color:#4F90A1;
+  margin-left: 0px;
+  padding-left: 5px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*id #pMapa para estabelecer los parametros de estilo del parrafo en el apartado Location del Blog*/
+#pMapa {
+  text-align: justify;
+  margin-left: 560px;
+  margin-top: -400px;
+  font-size: 22px;
+}
+
+/*Apartado de redimensionar elementos a una anchura de pantalla de hasta un minimo de 400px,
+que permite tener una homogéneneneidad en la colocación de objetos
+en espacios más reducidos.*/
+@media screen and (min-width: 10px) {
+  h1 {
+    text-align: center;
+  }
+
+  .boxText {
+    width: 100%;
+    background-color: #4F90A1;
+  }
+  
+  #pMapa {
+    text-align: justify;
+    margin-left: 0px;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}

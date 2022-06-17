@@ -1,0 +1,302 @@
+<!--
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+-->
+<!DOCTYPE html>
+<html>
+   <!--
+    En el bloque head hemos insertado todos los enlaches a las paginas esternas,
+    como la de style.css y main.js y los enlaches para utilizar diferentes
+    resoluziones de pantalla.
+  -->
+    <head>
+      <!--Nombre pagina Art and Technology.html-->
+        <title>
+            Blog Art and Technology
+        </title>
+        <!--Enlaches necesarios-->
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <!--
+    En el bloque body hemos colocado todos los elementos visibles en la pagina web.
+    -->
+    <body>
+      <!--En el primer div con clase "header" hay el logotipo, y las dos escritas que cambian:
+      de letras y de color. Este apartado es presente en todas las paginas web.-->
+      <div class="header">
+        <!--bloque "aside" que contiene el logotipo-->
+        <img id="logo" src="../img/logo1.jpeg">
+        <!--h1 que empieza con "Art and Technology" y al pasar del cursor cambia en "The new artistic avant-garde"-->
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Art and Technology</h1>
+        <!--h3 que al pasar del cursor camba del color blanco al color azul-->
+        <h3 id="cambioColor" onmouseover="mouseover()" onmouseout="mouseout()">Blog that tries to unite art and technology.</h3>
+      </div>
+          <br>
+          <!--En el segundo div con el id "box" hay todos los enlaches a las paginas web del blog.
+          Este box esta presente en todas las paginas web y, además, presenta la clase "active" que
+          permite saber siempre en que apartado se encuentra el usario gracias al nombre de la página
+          web resaltado de otro color-->
+          <div id="box">
+            <ul>
+              <!--Pagina web principal, "Home"-->
+              <li><a href="../index.html">Home</a></li>
+              <!--Pagina web "Art and technology", que presenta a nivel teórico el ámbito del arte y de la tecnología.-->
+              <li><a class="active" href="arteTec.html">Arte y Tecnología</a></li>
+              <!--Pagina web "Gallery", que presenta las imagenes de las obras anticipadas en el apartado "Home".-->
+              <li><a href="gallery.html">Gallery</a></li>
+              <!--Pagina web "Contact", que permte escribir directamente a los creadores de este blog o entrar de manera registrada.-->
+              <li><a href="contact.html">Contact</a></li>
+              <!--Pagina web "Location", que muestra la ubicación de la empresa y el lugar exacto de trabajo de la misma.-->
+              <li><a href="location.html">Location</a></li>
+            </ul>
+            </div>
+            <br>
+          <!--Bloque div con clase "HeaderScroll" que contine un h2 i la linea que indica a que altura se encuentra el usario-->
+          <div class="headerScroll">
+            <!--h2 y nombre de la barra de scroll-->
+            <h2></h2>
+            <!--Bloque div con clase "progress-container" que contiene la linea de altura-->
+            <div class="progress-container">
+              <!--Bloque div con clase "progress-bar" que indica la linea de altura-->
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
+          </div>
+          <!--Bloque general de clase "content" que contine todos los h, es decir los titulos, y los parrafos-->
+          <div class="content">
+            <!--Titulo parrafo-->
+            <h3>Art and Technology</h3>
+            <!--parrafo-->
+            <p>Art and technology have a complex but meaningful history of working together and influencing one another.
+              In many ways, they have evolved alongside each other to arrive at their place in the world today; a digital
+              age where they constantly overlap and portray new ideas. Christie’s Education discusses how the innovations
+              in technology have directly impacted the art world, and will continue to do so in the years to come.</b>.</p>
+            <!--Titulo parrafo-->
+            <h4>Innovations in Art</h4>
+            <!--parrafo-->
+            <p>With every new evolution in technology, art changes too. However, this doesn't just apply to their production.
+              The way art is viewed, shared, consumed and subsequently sold is constantly transforming too. Technology has made
+              art far more accessible. Just like with countless other aspects of modern life, the internet has allowed art to
+              be consumed in a more direct way, opening the industry to a wider and more diverse audience. Museums showcase
+              collections online, and artists have all the tools they need at their fingertips to promote and sell their own
+              pieces - often without the challenges that come with running a physical exhibit.
+              It’s clear that the relationship between art and technology has led to many exciting new pieces and techniques.
+              Significant innovations from the past couple of decades include:</b>.</p>
+            <!--Titulo parrafo-->
+            <h4>AI-Generated Art</h4>
+            <!--parrafo-->
+            <p>Is Artificial Intelligence the next great Art Movement? Although experts attempt to keep us in check and suggest
+              the revelation is still in its infancy, it’s hard not to appreciate this extraordinary innovation in the art world.
+              Blurring the line between human and machine, AI-generated art offers us a new kind of unorthodox creativity. However,
+              new findings do not come without hesitance. Some argue that art generated through computer science is definitely not art,
+              or creative. Nevertheless, the example image above created by Mario Klingemann, show us artists are continuing to experiment,
+              combining art and technology further, as one.</p>
+            <!--Titulo parrafo-->
+            <h4>Blockchain</h4>
+            <!--parrafo-->
+            <p>Blockchain technology has multiple purposes for the art world, and has the potential to make an even more significant impact.
+              In a 2014 report, The Fine Arts Expert Institute (FAEI) found that over 50% of the artworks it had examined were either forged
+              or not attributed to the correct artist. The rise of blockchain can help change this and maintain the all-important authenticity
+              in the industry.
+              We spoke with Anne Bracegirdle, Senior Director, Pace X about the core applications of Blockchain technology ahead of the upcoming
+              Art and Tech: Blockchain course which she is teaching on at Christie's Education, New York on December 10. </p>
+            <!--parrafo-->
+            <p>What is blockchain art?
+              Interestingly, “blockchain art” isn’t quite an accurate phrase. I’m happy to outline the different ways blockchain is utilized by
+              artists, however, to help readers understand the correct questions to ask. 
+              “Blockchain art” may refer to physical artworks that are tokenized. More likely, it may refer to digital art, which has the capacity
+              to be editioned on a blockchain via a 'hash,'' the equivalent of a digital identity (digital art can take the form of TIF files, gifs,
+              jpegs etc.). Artists are also using blockchain as a medium -- notable examples are Kevin Abosch’s project IAMA Coin and his collaboration
+              with Ai Wei Wei called Priceless. Artists can use blockchain to fractionalize (or divide) their work into pieces, each of which can be
+              owned separately. I encourage your readers to look into the Public Key/Private Key project at the Whitney Museum for a great example of
+              how fractionalization can create new forms of ownership. Finally, blockchain is being utilized for crypto-collectible trading platforms
+              like CryptoPunks and CryptoKitties. </p>
+            <!--parrafo-->
+            <p>How can you sell art on a blockchain?
+              Blockchain technology is currently being used to edition and sell digital art via digital art marketplaces, however these platforms aren’t
+              yet mainstream. To access them, one needs to understand how to use a digital wallet and cryptocurrency. Once these selling platforms start
+              accepting Fiat currency, I think more people will feel comfortable trading digital art. There is an opportunity here to educate people on
+              how to buy digital art, how to access a blockchain, and how to think about digital scarcity. I believe this education is necessary for
+              digital art to become more mainstream.
+              Secondly, there are opportunities to use blockchain platforms to simplify the trading of physical artwork, and create industry-wide title
+              registries. To move forward with this solution, however, the industry must decide how to connect the physical works to a blockchain registry,
+              and there are a number of companies creating solutions currently. It’s my belief that the data must be connected to the property for a solution
+              to function as a true supply chain. We will also have to agree upon which registry to use, and this decision-making may require the formation
+              of an art world consortium. </p>
+            <!--parrafo-->
+            <p>How can you sell blockchain art? 
+              The real success in utilizing blockchain will arise when trusted industry leaders and experts reach a consensus on the platforms we should utilize.
+              Blockchain provides the opportunity for competitors to share data while maintaining institutional and personal privacy, which would simplify our
+              clients’ lives dramatically. The increased transparency and available data would also make our industry more accessible to more people. To get there,
+              however, our first step is to agree upon an industry provider, or providers with interoperable platforms.
+              Find out more about blockchain and art on our upcoming course in New York Art and Tech: Blockchain which takes place on December 10. </p>
+            <!--Titulo parrafo-->
+            <h4>Virtual Reality</h4>
+            <!--parrafo-->
+            <p>Using headsets and technologies, including hardware like the Oculus Rift and Google Glass, institutions and artists are experimenting with virtual
+              reality to create and share dynamic and immersive art experiences. Developing these three-dimensional and simulated environments is potentially one
+              of the most exciting innovations in art, particularly for the consumer. In many ways, it has completely transformed the creative experience. 
+              On the opposing side, there are concerns across the art world as to who owns the pieces. For instance, if created with Tilt Brush, artists own their
+              work, but Google retains a worldwide license to reproduce or modify the work for promotion or development on their own platforms. In reality, there
+              are bound to be teething issues with such a new piece of technology. These are likely to be ironed out as the industry gets up to speed with the rate
+              that technology is progressing.
+              It is evident that the art landscape is undergoing a drastic transformation as it enmeshes with technology. These two disciplines may seem different
+              or contradictory - however, we have shown that there is a lot that binds these two together. With rapid new advancements in technology and shifting
+              perception of art in both its artists and consumers, we can expect to see exciting new developments over the coming decades, and a better understanding
+              of how these will affect the creative world as a whole. </p>
+              <!--Cita textos utilizados-->
+              <a target="_blank" href="https://education.christies.com/news/2019/may/growing-relationship-between-art-technology"><p>CHRISTIE'S, Education, The Growing Relationship between Art and Technology. November, 25, 2019</p></a>
+              <br>
+              <!--Titulo parrafo-->
+              <h3>The Serious Relationship of Art and Technology</h3>
+              <!--parrafo-->
+              <p>Both art and technology define and continue to reshape the world we live in. Re-imagining what we know as real or as a solid ground pushes our opinions
+                and understandings of nature to the limits. And with new inventions and experiments, both the mind and the body, the language, and the world itself seems
+                to be making room for a different sphere and fresh rules. Governed by the new aesthetics, the virtual, the scientific and the logic that is beyond belief,
+                technology in art challenges our perceptions and that is what creativity and science are all about. If we are to understand that creative production reflects
+                the period of time we are all in, how are we to grasp the growing number of young contemporary authors that base their practice on the presentation of immaterial
+                and ephemeral things?</p>
+              <!--parrafo-->
+              <p>The change of artworks' nature along with the shift in the public interaction and the reshaping of the museums and exhibition spaces are making more room today
+                than ever before for some of the most amazing examples of art and technology mix through digital art, kinetic pieces, and works that explore the internet and
+                online existence. The sci-fi mysteries of various movies that were mind-blowing just a decade or so, today shape the face of our reality. This part of the innovative
+                computer-based face, the traditional paintings and sculpture cannot capture to its fullest and that is why the fresh materials, such as data, pixels, mathematical and
+                engineer formulas are the tools number of contemporary creatives reach for.
+              </p>
+              <!--Titulo parrafo-->
+              <h4>The Beginning of the Art and Technology Story</h4>
+              <!--parrafo-->
+              <p>The truth is that technology has been providing creatives with original ways of expression since its beginning. The major shifts, like the transition from the analogue
+                to the digitally created expression, or to even go back further in time, the birth of Impressionism, the famous silkscreen prints of Andy Warhol, or the disturbing performance
+                works by Stelarc would not be possible if technology and science, parallel to the creativities’ road, did not push for original production and new frontiers. Creatives like
+                scientists explore materials, people, culture, histories, religion, and the gained knowledge transform into something else. One of the earliest personas associated with scientific
+                research is the famous Leonardo da Vinci, and to the investigating minds of the 17th-century, we owe the invention of the microscope and the telescope. Along with the investigation
+                of eye’s perception and the color theory, the birth of photography, and the moving pictures of Walt Disney, nothing else has helped to transform activities such as painting, drawing,
+                sculpture, and music than the invention of the computer between 1936 and 1938. With it, a completely different understanding towards the creative production and relationship between
+                art and technology was born.</p>
+              <!--Titulo parrafo-->
+              <h4>The New Media Production</h4>
+              <!--parrafo-->
+              <p>Since the 1960’s the term new media art was coined and it was used to describe practices that apply computer technology as an essential part of the creative process and production.
+                Placing the term under a vast umbrella known as new media, computer production, video art, computer-based installations, and later the Internet and Post Internet art and exploration
+                of the virtual reality became recognized as artistic practices. The term, in the contemporary practice, refers to the use of mass production and the manipulation of the virtual world,
+                its tools and programs. As such, designers and artists for the production of commercial pieces or for more elaborate and conceptual works implement many different computer programs,
+                such as 3D modeling, Illustrator, or Photoshop. The engagement of technology and science and the application of its language spread into space and many computer-based installations fuse
+                the conceptual and the new media. With the constant technological developments, the fresh aesthetic was formed and many of the creatives that have chosen to create in the virtual arena
+                of the Internet, comment upon the fusion of the virtual and the real, and question the communication and accessibility of their works in the parallel world. The innovative developments
+                opened up a fresh playground, where different authors could merge different skills and tools and offer to us, as their public a completely original perspective of the present we all share.</p>
+              <!--Titulo parrafo-->
+              <h4>Trends and Creatives Whose Work Would Not Be Possible Without Technology</h4>
+              <!--parrafo-->
+              <p>Regardless of what your opinion concerning the relationship between art and technology is, it’s a genuine fact that technology offers something that young aspiring authors always
+                desired - untouched grounds to explore, to discover something completely their own and sever ties with whatever is considered to be traditional, giving an opportunity to push the established
+                boundaries. This has been true ever since the first modern steps of technology - for example, how the invention of lantern influenced luminism, or how color tubes allowed painters to paint Plein
+                air and later led them to impressionism, or the time Joseph Nicephore Niepce invented primitive photography and influenced creativity for over 200 years now. As was the case in those periods, the
+                modern time has its own inventions and innovations that are influencing various creatives, effectively being a reflection of the time in which it was made - an essential part of art’s nature that
+                will never change. There are many contemporary authors who have decided to say no to brushes and chisels, boldly deciding to venture off into the unknown and test themselves in original techniques
+                that were impossible only a couple of decades ago.</p>
+              <!--Titulo parrafo-->
+              <h4>Artistic Chemistry of Kim Keever</h4>
+              <!--parrafo-->
+              <p>The honor of starting out our list of modern authors who depend on technologies goes to Kim Keever, a modern-day hydroponic equivalent of Jackson Pollock. This American author devised a method
+                in which he drizzles paint into a 200-gallon fish tank, creating some magnificent effects before taking photos of the colorful chemical reactions. His work is so amazing that it fascinates you whilst
+                also leaving you puzzled, questioning which medium you are actually observing.</p>
+              <!--Titulo parrafo-->
+              <h4>Eric Standley’s Papers and Lasers</h4>
+              <!--parrafo-->
+              <p>Keever learned how to manipulate chemistry thanks to his NASA experiences and scientific background, something that can also be said to some extent about Eric Standley who grew up in a household of
+              engineers. Standley’s paper-cut artworks expand the traditional use of the medium as he works with lasers, shredding with it upwards of 250 sheets of archival paper. The most impressive aspect of his
+              production is the number of details he is able to achieve as his pieces are incredibly detailed and miniature.</p>
+              <!--Titulo parrafo-->
+              <h4>Robotics of Yuri Suzuki</h4>
+              <!--parrafo-->
+              <p>Another creative who relies heavily on science is a Japanese designer Yuri Suzuki. He is mostly famous for his work with will.i.am, namely Pyramidi, a piece made out of a trio of robotic instruments,
+                deconstructed versions of a piano, a guitar and a drum. The fascinating skill of engineering a piece like Pyramidi would be impressive enough, but Suzuki takes it another step forward and grants
+                it an artistic note.</p>
+              <!--Titulo parrafo-->
+              <h4>Cai Guo-Qiang and His Explosions</h4>
+              <!--parrafo-->
+              <p>A bit more extreme than previous authors on this list, Cai Guo-Qiang is a Chinese author who loves to experiment with the explosive nature of gunpowder and its modern variations, initiating what
+                he loves to call ignition events - after the controlled explosion, we are left with traces of an image that are literally burned into the surface. Cai Guo-Qiang also works in installations and performances,
+                often combining many elements of engineering and science in order to achieve the desired effects.</p>
+              <!--Titulo parrafo-->
+              <h4>The Fascination with Internet</h4>
+              <!--parrafo-->
+              <p>Logically, much of modern production that is somehow tied to science is concentrated on the Internet and the online world that altered the art scene in so many ways - providing an opportunity for literally
+                anyone to display his work and for the audience to seek out any piece that interests them, not to mention the way the Internet impacted the art market. Petra Cortright creates her paintings in order to explore
+                issues of online consumption, rendering them in aluminum and making endless modifications to the computer file until she is satisfied with the result. Another internet-obsessed individual is Parker Ito, a man
+                who relies on the reflective quality of 3M Scotchlite fabric which he translates on a computer screen.</p>
+              <!--Titulo parrafo-->
+              <h4>Pure Digital Production</h4>
+              <!--parrafo-->
+              <p>We also have to mention the medium of strictly compuer-based art, a technique that is completely exclusive to modern times. Some of the most interesting and successful computer inventors out there are Charles
+                Csuri (considered the father of computer art and computer graphics), Kyle McDonald (an artist/hacker), Sara Ludy (she actually does magic tricks with pixels) and James George (explores the ways how we see the
+                world through technology), but there are also creatives like Jodi, Phillip David Stearns and Jon Rafman who experimented with the potentials and boundaries of computer art.</p>
+              <h4>The Aesthetics of Computer Drawings and Paintings</h4>
+              <p>We should also mention crative practisioners who have not based their creative digital efforts on conceptual theories but instead decided to focus on pure visuals and wonderful aesthetics - standing out for
+                the beauty of their animation pieces, we mention Bobby Chiu, Cristiano Siqueira, Daniel Conway, Cris de Lara and Tae young Choi.</p>
+              <!--Titulo parrafo-->
+              <h4>Combining Traditional and Modern</h4>
+              <!--parrafo-->
+              <p>Earning a place in this article due to the playful nature of his artwork, Michael Manning is a man who starts every single one of his works with a computer program, acting out the experience of dabbling in
+                oil paint and later printing them, imitating the physical appearance of an actual acrylic brushstroke. In many ways, Michael Manning’s practice in painting, video, sculpture, and computer-based work explores
+                the relationship between technology and the analog.</p>
+              <!--Titulo parrafo-->
+              <h4>Technology and Performance Art</h4>
+              <!--parrafo-->
+              <p>Technology in performance field largely emerged with Fluxus and Gutai, two international 1960s avant-garde movements that attempted to establish new artistic vocabularies - in this day and age, there are many
+                performers who rely on technology to make the most out of their shows. One of the most impressive artists of this type is undoubtedly Chris Milk, a man whose pantomime-like performances have been astounding audiences
+                for years.The aforementioned Cai Guo-Qiang also authors performance pieces, often combined with his already explained technique of using explosives.</p>
+              <!--Titulo parrafo-->
+              <h4>Photography and Film</h4>
+              <!--parrafo-->
+              <p>The honorable mention goes to photography and film, the two similar mediums that are almost always mentioned when discussing contemporary techniques that use technology to their advantage. With numerous filmmakers
+                and photographers out there, we shall name an interesting and unusual Ben Tricklebank, a young author who decided to make use of his extensive scientific knowledge and talent for shooting films to make interactive
+                movies in which the viewers are responsible for which course the film will eventually take.</p>
+              <!--Titulo parrafo-->
+              <h4>Incredible Shows of Rafael Lozano-Hemmer</h4>
+              <!--parrafo-->
+              <p>There are also various artists who set up installation pieces based on science, depending on effects only modern technology is able to provide them. One such creative personality is Rafael Lozano-Hemmer, a Mexican
+                installation master whose impressive laser pieces have been astonishing audiences worldwide.</p>
+              <!--Titulo parrafo-->
+              <h4>Manipulating the Sound</h4>
+              <!--parrafo-->
+              <p>Much of the sound art is also quite dependent on the technological advancements, as the works of such artists like John Wynne could never be realized if the science did not intervene. Controlling sound may be much
+                more complex and diverse than what you may expect, so make sure to check out artists such as the aforementioned Wynne.
+                After this list that actually only scratched the surface of the incredible amount of artists who work alongside technological discoveries, it is obvious what the goal of such contemporary artists is - use the platform
+                of new technologies and create a base for new bold directions.</p>
+              <!--Titulo parrafo-->
+              <h4>Where to Master Both Art and Technology</h4>
+              <!--parrafo-->
+              <p>When it comes to learning and advancing in an art form that requires a solid knowledge of technology, the learning curve seems to be a bit steeper when compared to one of the more traditional arts such as painting - shortly
+                put, it may not be all down to practice. Whilst you are able to be a self-trained sculptor or a drawer with realistic chances of becoming effective at what you do, arts that require technologies are a whole different ball
+                game - an aspiring artist should really consider the option of attending classes or seeking mentorship. Regardless of where you live, you should be able to find a school or an institution that will enable you to make either
+                the first or the next step in your development. You will be able to meet similar-minded individuals, broaden your horizons, work in teams and master new techniques in a much shorter time frame when compared to the period needed
+                to figure some things out on your own. In order to point you in the right direction, we wish to name a few proven institutions around the world who offer opportunities to advance your skills, masterfully balancing between artistic
+                theories and technological approaches. Every faculty on this list will offer you, the student, an opportunity to enhance the desired skills to their maximum.
+                The Arts and Technology (ATEC) program at the University of Texas at Dallas is dedicated to, as their motto states, merging the innovation processes of artists, scientists and engineers by exploring experimental models through new technologies.
+                The University of Florida College of the Arts offers an interesting program called Art + Technology that concentrates on integrating the language and methods of science through a prism of art.
+                School of the Art Institute of Chicago's (SAIC) also has a fantastic section dedicated to training artists of the future, The Department of Art and Technology Studies.
+                University of California, Santa Barbara, also has a similar trans-disciplinary program that fuses mixed media, computer science, engineering, electronic music and virtual art research, practice, production, and theory.
+                Parsons School of Design in New York offers a BFA in Art, Media and Technology, an interdisciplinary course of study through which students explore the dynamic intersections of design, art, media, and technology.
+                Carnegie Mellon College of Fine Arts has a highly praised course highlighting the intersection of arts and technology.
+                Louis Riel Arts & Technology Centre (ATC) in Winnipeg place a priority on quality, industry-driven training in a professional culture defined by high expectations.
+                Centre for Arts and Technology in British Columbia is an excellent choice if you desire to perfect areas of film-making, animation, audio engineering, fashion design, event management, interior design, photography or graphic design.
+                Saxion University of Applied Sciences in Netherlands has an Art & Technology program which emphasizes the creative uses of technology. Keeping everything above in mind, it is completely fine to try and learn modern techniques on your own - furthermore,
+                it is even encouraged if you are the type of person who enjoys such an approach to learning.</p>
+              <!--Titulo parrafo-->
+              <h4>A Disputed Relationship</h4>
+              <!--parrafo-->
+              <p>After everything you’ve read above, it is quite obvious that technology is redefining art in innovative, often strange ways. As is the case with all mediums and genres, the critics and audiences here are just as divided into those who believe
+                science’s impact on creativity is a positive or a negative moment in art history. When this discussion arises, there are usually many raised eyebrows that openly criticize such an approach claiming that technology only manages to break the bond connecting
+                the author with the piece, as well as making the entire process of creating art much easier and more trivial. This is, of course, entirely false.
+                Firstly, as long as the artists standing behind their pieces stay creative and imaginative, there is no cause for concern. Secondly, art does not have to be complex or difficult to make in order to be grand - think Malevich or Duchamp. In fact, the entirety
+                of modern art was dedicated to proving that the process and aesthetics of a piece are completely secondary when compared to the idea placed behind it. It is all about the experience the author delivers to the public, changing how the viewer thinks, feels and
+                views the world, makes them think or simply provokes them. These aspects are what really counts and it has absolutely nothing to do with the techniques that the author chooses to use. With that being said, we should definitely not be intimidated by the
+                technological presence in art as it does not impact the very core of creating and experimenting - instead, we should simply sit back and enjoy the impressive variety modern times can offer.</p>
+              <!--Cita textos utilizados-->
+              <a target="_blank" href="https://www.widewalls.ch/magazine/the-serious-relationship-of-art-and-technology"><p>WIDEWALLS, The Serious Relationship of Art and Technology. July, 25, 2017</p></a>
+          </div>
+    </body>
+</html>

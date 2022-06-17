@@ -1,0 +1,156 @@
+<!--
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+-->
+<!DOCTYPE html>
+<html>
+  <!--
+    En el bloque head hemos insertado todos los enlaches a las paginas esternas,
+    como la de style.css y main.js y los enlaches para utilizar diferentes
+    resoluziones de pantalla.
+  -->
+    <head>
+      <!--Nombre pagina Art and Technology.html-->
+        <title>
+            Blog contactanos
+        </title>
+        <!--Enlaches necesarios-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    <!--
+    En el bloque body hemos colocado todos los elementos visibles en la pagina web.
+    -->
+    <body>
+      <!--En el primer div con clase "header" hay el logotipo, y las dos escritas que cambian:
+      de letras y de color. Este apartado es presente en todas las paginas web.-->
+      <div class="header">
+         <!--bloque "aside" que contiene el logotipo-->
+        <img id="logo" src="../img/logo1.jpeg">
+        <!--h1 que empieza con "Art and Technology" y al pasar del cursor cambia en "The new artistic avant-garde"-->
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Art and Technology</h1>
+        <!--h3 que al pasar del cursor camba del color blanco al color azul-->
+        <h3 id="cambioColor" onmouseover="mouseover()" onmouseout="mouseout()">Blog that tries to unite art and technology.</h3>
+      </div>
+          <br>
+          <!--En el segundo div con el id "box" hay todos los enlaches a las paginas web del blog.
+          Este box esta presente en todas las paginas web y, además, presenta la clase "active" que
+          permite saber siempre en que apartado se encuentra el usario gracias al nombre de la página
+          web resaltado de otro color-->
+          <div id="box">
+            <ul>
+              <!--Pagina web principal, "Home"-->
+              <li><a href="../index.html">Home</a></li>
+              <!--Pagina web "Art and technology", que presenta a nivel teórico el ámbito del arte y de la tecnología.-->
+              <li><a href="arteTec.html">Arte y Tecnología</a></li>
+              <!--Pagina web "Gallery", que presenta las imagenes de las obras anticipadas en el apartado "Home".-->
+              <li><a href="gallery.html">Gallery</a></li>
+              <!--Pagina web "Contact", que permte escribir directamente a los creadores de este blog o entrar de manera registrada.-->
+              <li><a class="active" href="contact.html">Contact</a></li>
+              <!--Pagina web "Location", que muestra la ubicación de la empresa y el lugar exacto de trabajo de la misma.-->
+              <li><a href="location.html">Location</a></li>
+            </ul>
+            </div>
+          <br>
+          <!--Parte si no tienes un account, primer form-->
+          <h3>Contact Form</h3>
+          <!--Bloque que contiene todo el primer form-->
+          <div class="container">
+            <!--Empiezo form-->
+            <form action="/action_page.php">
+              <!--Primer elemento First Name-->
+              <label for="fname">First Name</label>
+              <!--elemento input que define lo que hay al interior de la seccion First Name-->
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <!--Segundo elemento Last Name-->
+              <label for="lname">Last Name</label>
+              <!--elemento input que define lo que hay al interior de la seccion Last Name-->
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <!--Tercero elemento Country-->
+              <label for="country">Country</label>
+              <!--elemento input que define lo que hay al interior de la seccion Country-->
+              <select id="country" name="country">
+              <!--Diferentes nacionalidades posibles-->
+              <option value="vacio"></option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Germany">Germany</option>
+              </select>
+              <!--Cuarto elemento Talk about you-->
+              <label for="subject">Talk about you</label>
+              <!--elemento input que define lo que hay al interior de la seccion Talk about you-->
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <!--Boton enviar-->
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          <!--Parte si ya tienes un account, segundo form-->
+          <!--div con clase "boxText", que contine el titulo del segundo form-->
+          <div class="boxText">
+          <!--Titulo segundo form que informa el usario que si ya tiene una cuenta puede entrar sin crear una cuenta nueva-->
+          <h2>If you have already registered, log in with your saved credentials.</h2>
+          </div>
+          <!--Bloque div con clase "container" que contiene todo el segundo form-->
+          <div class="container">
+            <!--Empiezo segundo form-->
+            <form action="/action_page.php">
+              <!--Parametro rigas de la tabla-->
+              <div class="row">
+              <!--h2 que indica que se puede ingresar al blog con una cuenta o manualmente-->
+              <h2 style="text-align:center">Login with Social Media or Manually</h2>
+              <!--Bloque que indica la posibilidad de ingersar al blog en diferente manera-->
+              <div class="vl">
+              <!--Span con las letras or que separa las dos posibilidades de ingreso-->
+              <span class="vl-innertext">or</span>
+              </div>
+             <!--Parametro columnas de la tabla-->
+             <div class="col">
+               <!--Apartado para engresar con Facebook-->
+               <a href="#" class="fb btn">
+                 <!--Nombre de la red social-->
+                 <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+               </a>
+               <!--Apartado para engresar con Twitter-->
+               <a href="#" class="twitter btn">
+                 <!--Nombre de la red social-->
+                 <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+               </a>
+               <!--Apartado para engresar con Google+-->
+               <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                 <!--Nombre de la red social-->
+                 </i> Login with Google+
+               </a>
+             </div>
+             <!--Parametro columnas de la tabla-->
+             <div class="col">
+             <div class="hide-md-lg">
+               <!--Parrafo que indica que se puede entrar manualmente-->
+               <p>Or sign in manually:</p>
+             <!--Pequeño form con algunos datos personales de poner para engresar al blog-->
+             </div class="bottom-container">
+               <!--Primer elento de ingresar, username-->
+               <input type="text" name="username" placeholder="Username" required>
+               <!--Segundo elento de ingresar, password-->
+               <input type="password" name="password" placeholder="Password" required>
+               <!--Boton de envio-->
+               <input type="submit" value="Login">
+             </div>
+             </div>
+            </form>
+         </div>
+         <!--Seccion de botones del intero form, primero o segundo que sea-->
+         <div class="bottom-container">
+           <div class="row">
+             <div class="col">
+               <!--Boton para salvar los datos ingresados-->
+               <a href="#" style="color:white" class="btn">Save</a>
+             </div>
+             <div class="col">
+               <!--Boton si se ha olvidado la password de la cuenta-->
+               <a href="#" style="color:white" class="btn">Forgot password?</a>
+             </div>
+           </div>
+         </div>
+    </body>
+</html>
