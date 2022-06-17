@@ -1,0 +1,157 @@
+<!--
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+-->
+<!DOCTYPE html>
+<html>
+  <!--
+    En el bloque head hemos insertado todos los enlaches a las paginas esternas,
+    como la de style.css y main.js y los enlaches para utilizar diferentes
+    resoluziones de pantalla.
+  -->
+    <head>
+        <!--Nombre pagina Index.html-->
+        <title>
+            Blog AT
+        </title>
+        <!--Enlaches necesarios-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+    </head>
+    <!--
+    En el bloque body hemos colocado todos los elementos visibles en la pagina web.
+    -->
+    <body>
+      <!--En el primer div con clase "header" hay el logotipo, y las dos escritas que cambian:
+      de letras y de color. Este apartado es presente en todas las paginas web.-->
+      <div class="header">
+        <!--bloque "aside" que contiene el logotipo-->
+        <aside>
+        <img id="logo" src="img/logo1.jpeg">
+        </aside>
+        <!--h1 que empieza con "Art and Technology" y al pasar del cursor cambia en "The new artistic avant-garde"-->
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Art and Technology</h1>
+        <!--h3 que al pasar del cursor camba del color blanco al color azul-->
+        <h3 id="cambioColor" onmouseover="mouseover()" onmouseout="mouseout()">Blog that tries to unite art and technology.</h3>
+      </div>
+      <br>
+      <!--En el segundo div con el id "box" hay todos los enlaches a las paginas web del blog.
+      Este box esta presente en todas las paginas web y, además, presenta la clase "active" que
+      permite saber siempre en que apartado se encuentra el usario gracias al nombre de la página
+      web resaltado de otro color-->
+      <div id="box">
+        <ul>
+          <!--Pagina web principal, "Home"-->
+          <li><a class="active" href="index.html">Home</a></li>
+          <!--Pagina web "Art and technology", que presenta a nivel teórico el ámbito del arte y de la tecnología.-->
+          <li><a href="pages/arteTec.html">Art and technology</a></li>
+          <!--Pagina web "Gallery", que presenta las imagenes de las obras anticipadas en el apartado "Home".-->
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <!--Pagina web "Contact", que permte escribir directamente a los creadores de este blog o entrar de manera registrada.-->
+          <li><a href="pages/contact.html">Contact</a></li>
+          <!--Pagina web "Location", que muestra la ubicación de la empresa y el lugar exacto de trabajo de la misma.-->
+          <li><a href="pages/location.html">Location</a></li>
+        </ul>
+        </div>
+        <br>
+        <br>
+        <!--Form con el id="boxSerch" que permite buscar las obras directamente si se sabe el nombre de la misma.
+        Esta "boxSerch" es presente solamente en la primera pagina web, es decir el la pagina "Home".-->
+        <form>
+          <input id="boxSerch" type="text" name="search" placeholder="Search the work that interests you..">
+        </form>
+        <!--En el tercer div com la clase "boxText" hay un h2 que introduce las obras y los artistas presentes en el Blog.-->
+        <div class="boxText">
+        <h2>This blog aims to provide and share information on the use of new technologies in the artistic field.</h2>
+        </div>
+        <br>
+        <!--Primera section, cada bloque tiene dos párrafos que describen el artista y la obra y dos botones que permiten
+        bajar al bloque siguiente o subir al bloque delantero para usar el lateral de la cerda.
+        Además, en cada bloque se puede hacer doble clic para visualizar un color diferente.
+        -->
+        <div class="main" id="section1" onmousedown="mDown1(this)" onmouseup="mUp1(this)">
+          <!--Nombre del Artista-->
+          <h2>Jeff Koons</h2>
+          <!--primer parrafo descriptivo-->
+          <p id="text1">Appointed to the Board of Directors, International Centre for Missing & Exploited Children, Alexandria, Virginia
+
+            Inducted to the Signet Society for Arts and Letters at Harvard University, Cambridge, Massachusetts
+            
+            Received a Doctorate of Fine Arts, Honoris Causa, from The Corcoran, Washington, D.C.
+            
+            Global Vision Award, Second Annual Hope Awards, National Center for Missing & Exploited Children, Alexandria, Virginia
+            
+            Awarded the Skowhegan Medal for Sculpture, Skowhegan School of Arts, New York, New York.</p>
+          <!--Boton para ir a la obra siguiente-->
+          <a href="#section2"><img class="down" src="img/ICONOS/DOWN_4.png"></a>
+          <!--segundo parrafo descriptivo-->
+          <p id="text2">Adopting the technology of the famous Pokemon GO, Snapchat decided to approach the Millennials using augmented reality to make art
+             accessible to everyone and attract their interest. Walking on the Champs de Mars, with active geolocation and open Snapchat, you can
+             see through your smartphone, a balloon dog* equal to the work of Jeff Koons, resting on the lawn. In several capitals around the
+             world you can admire other works of the artist, just enough to make art more accessible for those who do not like to wait or even for
+             those who do not have the opportunity to go to the museum.</p>
+         </div>
+         <!--Segunda section, cada bloque tiene dos párrafos que describen el artista y la obra y dos botones que permiten
+         bajar al bloque siguiente o subir al bloque delantero para usar el lateral de la cerda.
+         Además, en cada bloque se puede hacer doble clic para mostrar en el espacio coloreado una imagen de la obra en cuestión.
+         -->
+         <div class="main" id="section2" onmousedown="mDown2(this)" onmouseup="mUp2(this)">
+           <!--Nombre del Artista-->
+           <h2>Hatsune Miku</h2>
+           <!--primer parrafo descriptivo-->
+           <p id="text1">Since we are on the theme of music, do you know Hatsune Miku? She is a Japanese singer who travels the world in concert and who
+             stands out for being... 100% digital. For his voice he uses as a basis that of a voice actress and singer, then modified with the
+             help of different software. Real celebrities like you raise - just like Andrew Niccol’s film Simone (see if you are interested in
+             the issues of identity and art through new technologies) - many questions.</p>
+           <!--Botones para ir a la obra siguiente o anterior-->
+           <a href="#section3"><img class="up" src="img/ICONOS/DOWN_5.png"></a>
+           <a href="#section1"><img class="down" src="img/ICONOS/UP_5.png"></a>
+           <!--segundo parrafo descriptivo-->
+           <p id="text2">There have since been numerous installments, such as additional voice libraries dubbed 'Append', as well as an upgrade for the
+             VOCALOID3 engine, which contained an English vocal release. She received a VOCALOID4 update to her Japanese and English voicebanks
+             in August 2016, as well as a Mandarin Chinese voicebank in September 2017.</p>
+         </div>
+         <!--Tercer section, cada bloque tiene dos párrafos que describen el artista y la obra y dos botones que permiten
+         bajar al bloque siguiente o subir al bloque delantero para usar el lateral de la cerda.
+         Además, en cada bloque se puede hacer doble clic para mostrar en el espacio coloreado una imagen de la obra en cuestión.
+         -->
+         <div class="main" id="section3" onmousedown="mDown1(this)" onmouseup="mUp1(this)">
+          <!--Nombre del Artista-->
+          <h2>Oscar Santillán</h2>
+          <!--primer parrafo descriptivo-->
+          <p id="text1">(Milagro, Ecuador - 1980)
+            His education began in the early 2000’s as a self-taught artist in his native Ecuador. Those formative times were deeply shaped by
+            working within collective environments. Throughout the years those experiences have remained alive in his practice in the form of
+            collaborations with scientists and other curious minds. In 2011 he obtained an MFA in Sculpture from VCU—Virginia Commonwealth University,
+            in the US; and, consequent fellowships have allowed him to be an artist-in-residence at Skowhegan (US), Jan van Eyck (NL) Ratti
+            Foundation (IT), Delfina Foundation (UK), and Leiden Astronomical Observatory (NL). More recently, he have been one of the igniters setting
+            'órbitat' in motion, a platform for the encounter of art, science, and technology in Latin America.</p>
+          <!--Botones para ir a la obra siguiente o anterior-->
+          <a href="#section4"><img class="down" src="img/ICONOS/DOWN_4.png"></a>
+          <a href="#section2"><img class="up" src="img/ICONOS/UP_4.png"></a>
+          <!--segundo parrafo descriptivo-->
+          <p id="text2">ASTRONAUT CUT 2018
+            Performance grabado en video. 8:34 min, 4K, color, sonido estéreo.</p>
+         </div>
+         <!--Cuarta section, cada bloque tiene dos párrafos que describen el artista y la obra y dos botones que permiten
+         bajar al bloque siguiente o subir al bloque delantero para usar el lateral de la cerda.
+         Además, en cada bloque se puede hacer doble clic para mostrar en el espacio coloreado una imagen de la obra en cuestión.
+         -->
+         <div class="main" id="section4" onmousedown="mDown2(this)" onmouseup="mUp2(this)">
+           <!--Nombre del Artista-->
+           <h2>JUAN CARLOS LEÓN: LA CAÍDA DEL JAGUAR</h2>
+           <!--primer parrafo descriptivo-->
+           <p id="text1">The way in which humans have used energy resources has been reflected in global geopolitics throughout history. In Carbon Democracy - Political
+             Power in The Age of Oil (2011), Timothy Mitchell describes the network of fossil fuel relationships through a historical description of energy use.
+             Mitchell points out that, until 200 years ago, the energy used came mainly from renewable sources derived from plants, animals that fed on them,
+             forest wood, water and wind energy, that moved mills and transportation facilities. Most of the world’s population continued to live this way until
+             the middle of the 20th century; however, around 1800, organic resources were gradually replaced by the highly concentrated resources of buried solar energy.</p>
+             <!--Boton para ir a la obra anterior-->
+             <a href="#section3"><img class="up" src="img/ICONOS/UP_5.png"></a>
+           <!--segundo parrafo descriptivo-->
+           <p id="text2">Detail of "Costra". View of the exhibition "La caída del Jaguar", by Juan Carlos León, at the Centro de Arte Contemporáneo (CAC) in Quito, 2021</p>
+         </div>
+    </body>
+</html>

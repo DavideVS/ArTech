@@ -1,0 +1,83 @@
+<!--
+    ENTREGA PROYECTO FINAL PROGRAMACION WEB
+    DAVIDE VENIER SEGOVIA Y LEONARDO JIMENEZ IGLESIAS
+-->
+<!DOCTYPE html>
+<html>
+  <!--
+    En el bloque head hemos insertado todos los enlaches a las paginas esternas,
+    como la de style.css y main.js y los enlaches para utilizar diferentes
+    resoluziones de pantalla.
+  -->
+    <head>
+      <!--Nombre pagina Art and Technology.html-->
+        <title>
+            Blog Location
+        </title>
+        <!--Enlaches necesarios-->
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    <!--
+    En el bloque body hemos colocado todos los elementos visibles en la pagina web.
+    -->
+    <body>
+      <!--En el primer div con clase "header" hay el logotipo, y las dos escritas que cambian:
+      de letras y de color. Este apartado es presente en todas las paginas web.-->
+      <div class="header">
+        <!--bloque "aside" que contiene el logotipo-->
+        <img id="logo" src="../img/logo1.jpeg">
+        <!--h1 que empieza con "Art and Technology" y al pasar del cursor cambia en "The new artistic avant-garde"-->
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)">Art and Technology</h1>
+        <!--h3 que al pasar del cursor camba del color blanco al color azul-->
+        <h3 id="cambioColor" onmouseover="mouseover()" onmouseout="mouseout()">Blog that tries to unite art and technology.</h3>
+      </div>
+          <br>
+          <!--En el segundo div con el id "box" hay todos los enlaches a las paginas web del blog.
+          Este box esta presente en todas las paginas web y, además, presenta la clase "active" que
+          permite saber siempre en que apartado se encuentra el usario gracias al nombre de la página
+          web resaltado de otro color-->
+          <div id="box">
+            <ul>
+              <!--Pagina web principal, "Home"-->
+              <li><a href="../index.html">Home</a></li>
+              <!--Pagina web "Art and technology", que presenta a nivel teórico el ámbito del arte y de la tecnología.-->
+              <li><a href="arteTec.html">Arte y Tecnología</a></li>
+              <!--Pagina web "Gallery", que presenta las imagenes de las obras anticipadas en el apartado "Home".-->
+              <li><a href="gallery.html">Gallery</a></li>
+              <!--Pagina web "Contact", que permte escribir directamente a los creadores de este blog o entrar de manera registrada.-->
+              <li><a href="contact.html">Contact</a></li>
+              <!--Pagina web "Location", que muestra la ubicación de la empresa y el lugar exacto de trabajo de la misma.-->
+              <li><a class="active" href="location.html">Location</a></li>
+            </ul>
+            </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <!--Div con clase "boxText" que contine el h1 con la escrita "Where can you find us"-->
+          <div class="boxText">
+          <!--h1 como titulo de la pagina y con la escrita donde pueden encontrarnos-->
+          <h1 id="h1Location">Where can you find us</h1>
+          </div>
+          <!--Div que contiene el mapa, indicando su resolucion y el script de como cargarlo en la pagina web Location-->
+          <div id="map" style="width:550px;height:550px">
+          <script type="text/javascript" src="../js/main.js"></script></div>
+            <!--Parrafo con una corta descricion de donde nos encontramos y porque hemos elegido esta destinacion-->
+            <p id="pMapa">Our location is in London, UK. That’s why we decided to write in our Blog in English,
+            to get even closer to our daily users.
+            Have started our activity of publishing works of art related to technology for a short
+            time, but we always try to bring new and fresh pieces. The choice of the place fell in
+            this wonderful city full of history and modernism at the level of art, but also of art critics.
+            London is for us a springboard that allows us to get to more people passionate about this world
+            and have continuous exchanges of ideas. The place in opening a project is fundamental and for us
+            this represents the vanguard and the possibility. Thanks to this continuous exchange of information
+            in this area we can make myself known and give a name to our business, which slowly can reach more people and notoriety.
+            In some ways our Blog can also be used to discover new faces of art that until before were hidden or did not have the
+            opportunity to show off.</p>
+    </body>
+</html>
